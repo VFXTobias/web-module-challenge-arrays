@@ -273,12 +273,16 @@ var regionalFlavors = ["Pink Bubblegum",
     "Caramel 'n' Cookies"]
 
 function getRandomFlavors(arr1, arr2, arr3, arr4){
-        targArray = [arr1, arr2, arr3, arr4];
+        // targArray = [arr1, arr2, arr3, arr4];
+        targArray = arr1.concat(arr2, arr3, arr4);
+            // console.log(targArray);
         randomFlavors = [];
-        for(i=0; i<targArray.length; i++){
-            var randNum = Math.floor(Math.random() * 7) + 1;
-            randomFlavors.push = targArray[i].slice(randNum, 7);
-            console.log (randomFlavors);
+            // console.log(randomFlavors);
+        for(i=0; i<31; i++){
+            var randNum = Math.floor(Math.random() * 30) + 1;
+            // console.log(targArray[i].slice(randNum, (randNum + 7)));
+            randomFlavors.push(targArray[randNum]);
+            // console.log (randomFlavors);
         }
     
     
@@ -287,3 +291,15 @@ function getRandomFlavors(arr1, arr2, arr3, arr4){
 }
 
 console.log(getRandomFlavors(newFlavors, regionalFlavors, seasonalFlavors, originalFlavors));
+
+// function getRandomFlavors(arr1, arr2, arr3, arr4){
+//     targArray = [arr1, arr2, arr3, arr4];
+//     randomFlavors = [];
+
+//     for( i =0; i <targArray.length; i++){
+
+//         for(j=0; j< 31; j++){
+//             randomFlavors[j] = targArray[i].randNum;
+//         }
+//     }
+// }
